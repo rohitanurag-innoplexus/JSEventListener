@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<body>
+
+
+<script>
+function loadJS(v){
+    var d=document, h=d.getElementsByTagName('head')[0], newScript;
+    try {h.removeChild(d.getElementById('lib_lang'));} catch (e){}
+    newScript      = d.createElement('script');
+    newScript.id   = 'lib_lang';
+    newScript.type = 'text/javascript';
+    newScript.src  = v+'.js';
+    h.appendChild(newScript);
+    //location.reload();
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+<select lang="en" onchange="loadJS(this.value)">
+    <option selected="selected" disabled="true"> Select a keyboard language</option>
+    <option value="jj">MouseHover </option>
+    <option value="hh">jaaj </option>
+
+</select>
+
+
+
+
+
+
+<div id="demo">
+When the event occurs, an event object is passed to the function as the first parameter. The type of the event object depends on the specified event. For example, the "click" event belongs to the MouseEvent object.
+
+
+</div>
+</body>
+</html>
+

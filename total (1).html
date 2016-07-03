@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+
+<style>
+#ar {
+    display: none;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+<select lang="en" onchange="loadJS(this.value)">
+    <option selected="selected" disabled="true"> Select a keyboard language</option>
+    <option value="jj">MouseHover </option>
+    <option value="hh">jaaj </option>
+
+</select>
+
+
+
+<br><br><br><br>
+
+<center>
+<div id="demo" >
+aaa
+xxasxaxdasdxasdxasxsaxas
+
+</div>
+</center>
+<div id="ar" >
+rohit
+</div>
+
+
+
+<script>
+
+
+function loadJS(v){
+
+if (v=="jj")
+{
+document.getElementById("demo").addEventListener("mousedown", mouseDown);
+document.getElementById("demo").addEventListener("mouseup", mouseUp);
+
+function mouseDown() {
+    document.getElementById("demo").innerHTML = "The mouse button is held down.";
+}
+
+function mouseUp() {
+    document.getElementById("demo").innerHTML = "You released the mouse button.";
+}
+}
+else
+{
+document.getElementById("demo").addEventListener("mouseover", mouseOver);
+document.getElementById("demo").addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+    document.getElementById("demo").style.color = "red";
+}
+
+function mouseOut() {
+    document.getElementById("demo").style.color = "black";
+}
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
